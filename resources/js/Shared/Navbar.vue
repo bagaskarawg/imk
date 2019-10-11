@@ -15,7 +15,7 @@
             |
             <inertia-link :href="route('login')" class="hover:underline">Masuk</inertia-link>
             |
-            <inertia-link href="#" class="hover:underline">Daftar</inertia-link>
+            <inertia-link :href="route('register')" class="hover:underline">Daftar</inertia-link>
         </div>
     </div>
 </template>
