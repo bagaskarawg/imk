@@ -1,7 +1,9 @@
 <template>
     <div class="bg-primary p-2 sm:p-5 clearfix text-white">
         <div class="w-full sm:w-2/3 sm:float-left">
-            <img src="/img/logo.png" alt="Logo" class="float-left mr-2 sm:mr-5" />
+            <inertia-link :href="route('welcome')">
+                <img src="/img/logo.png" alt="Logo" class="float-left mr-2 sm:mr-5" />
+            </inertia-link>
             <div class="w-auto">
                 <p>Selamat datang
                 <p>Di Dinas Kependudukan dan Pencatatan Sipil</p>

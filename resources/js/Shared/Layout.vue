@@ -1,7 +1,7 @@
 <template>
   <main class="relative min-h-screen">
     <navbar />
-    <div class="container p-4 pb-24">
+    <div class="container mx-auto p-4 pb-24">
       <slot />
     </div>
     <copyright />
@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import Navbar from '@/Shared/Navbar'
-import Copyright from '@/Shared/Copyright'
+import Navbar from './Navbar'
+import Copyright from './Copyright'
 
 export default {
   components: {

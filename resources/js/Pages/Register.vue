@@ -31,14 +31,13 @@
                 <div class="sm:flex mb-2">
                     <label class="sm:w-2/6 sm:text-right sm:pr-3" for="captcha">Captcha</label>
                     <div class="sm:w-4/6">
-                        <div class="mb-2" v-html="$page.captcha"></div>
+                        <img class="mb-1" :src="$page.captcha" />
                         <input type="text" id="captcha" name="captcha" v-model="fields.captcha" class="border border-black p-1 w-full sm:w-40">
                         <p>Masukkan 4 kode huruf yang tampak pada layar.</p>
                     </div>
                 </div>
                 <div class="sm:flex mb-2">
-                    <div class="sm:w-2/6"></div>
-                    <div class="sm:w-4/6">
+                    <div class="sm:w-4/6 sm:ml-auto">
                         <input-button @click="submit()" class-name="inline-block">Daftar</input-button>
                         <input-button @click="clearForm()" class-name="inline-block" face="danger">Hapus Isian</input-button>
                     </div>
@@ -108,7 +107,7 @@ export default {
             }
         },
         submit () {
-            console.log('submit')
+            this.$inertia.visit(route('activation'))
         }
     },
 }

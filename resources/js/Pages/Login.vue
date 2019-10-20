@@ -5,7 +5,7 @@
                 <h1 class="font-bold text-xl sm:text-3xl mb-5 uppercase">Selamat datang di Disdukcapil</h1>
                 <input-text class-name="w-56 mb-3 p-2 text-center placeholder-gray-600" type="text" name="nama_user" v-model="nama_user" placeholder='"Masukkan Nama User"' />
                 <input-text class-name="w-56 mb-3 p-2 text-center placeholder-gray-600" type="password" name="kata_sandi" v-model="kata_sandi" placeholder='"Masukkan Kata Sandi"' />
-                <input-button class-name="block w-32 uppercase"><img src="/img/icon-login.png" alt="Masuk" class="inline w-6 h-6"> Masuk</input-button>
+                <input-button @click="login()" class-name="block w-32 uppercase"><img src="/img/icon-login.png" alt="Masuk" class="inline w-6 h-6"> Masuk</input-button>
                 <p>atau</p>
                 <input-button class-name="block w-32 uppercase" :href="route('register')"><img src="/img/icon-signup.png" alt="Daftar" class="inline w-6 h-6"> Daftar</input-button>
                 <div class="clearfix mt-8">
@@ -36,6 +36,11 @@ export default {
         return {
             nama_user: '',
             kata_sandi: '',
+        }
+    },
+    methods: {
+        login () {
+            this.$inertia.visit(route('home'))
         }
     }
 }

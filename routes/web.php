@@ -16,6 +16,7 @@ Route::get('/', function () {
 })->name('welcome');
 Route::get('masuk', 'Auth\LoginController@showLoginForm')->name('login');
 Route::get('daftar', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::get('aktivasi', 'Auth\RegisterController@showActivationForm')->name('activation');
 
 Route::get('beranda', function () {
     return Inertia\Inertia::render('Home');

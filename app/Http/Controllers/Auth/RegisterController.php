@@ -79,7 +79,14 @@ class RegisterController extends Controller
     public function showRegistrationForm()
     {
         return Inertia::render('Register', [
-            'captcha' => captcha_img('flat'),
+            'captcha' => captcha_src('flat'),
+        ]);
+    }
+
+    public function showActivationForm()
+    {
+        return Inertia::render('Activation', [
+            'captcha' => captcha_src('flat')
         ]);
     }
 }
