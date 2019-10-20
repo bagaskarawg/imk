@@ -1,7 +1,7 @@
 <template>
-  <main>
+  <main class="relative min-h-screen">
     <navbar />
-    <div class="container p-5">
+    <div class="container p-4 pb-24">
       <slot />
     </div>
     <copyright />
