@@ -1,9 +1,8 @@
 <template>
     <layout title="Daftar">
         <div class="flex">
-            <div class="w-1/6"></div>
-            <div class="border border-black w-3/6 p-3">
-                <h1 class="text-3xl mb-5 uppercase text-center">Daftar</h1>
+            <div class="border border-black w-4/6 p-3">
+                <h1 class="font-bold text-xl sm:text-3xl mb-5 uppercase text-center">Daftar</h1>
                 <div class="flex mb-2">
                     <label class="w-2/6 text-right pr-3" for="nama_lengkap">Nama Lengkap</label>
                     <div class="w-4/6">
@@ -88,7 +87,7 @@
                     </div>
                 </div>
             </div>
-            <div class="w-2/6 mx-3 px-3 border-l border-blue-400 h-full pb-3 text-xl">
+            <div class="w-2/6 mx-3 px-3 border-l border-blue-400 h-full pb-3 sm:text-xl">
                 <h1 class="text-blue-700 mb-3">Informasi</h1>
                 <p class="mb-3">
                     <span class="text-red-600">*</span>

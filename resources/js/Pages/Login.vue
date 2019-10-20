@@ -1,36 +1,31 @@
 <template>
     <layout title="Masuk">
         <div class="flex">
-            <div class="w-1/3"></div>
-            <div class="border border-black border-2 shadow-lg bg-secondary w-1/3 p-3 text-center">
-                <h1 class="text-3xl mb-5">Selamat datang di Disdukcapil</h1>
-                <div class="mb-3">
-                    <input type="text" class="bg-secondary border border-black p-2 rounded-lg w-56 max-w-full placeholder-gray-600 text-center" placeholder='"Masukkan Nama User"'>
-                </div>
-                <div class="mb-3">
-                    <input type="password" class="bg-secondary border border-black p-2 rounded-lg w-56 max-w-full placeholder-gray-600 text-center" placeholder='"Masukkan Kata Sandi"'>
-                </div>
-                <button class="block bg-tertier hover:bg-green-700 w-32 mx-auto p-3 rounded-lg text-white uppercase">
+            <div class="border border-black border-2 shadow-lg w-2/3 sm:ml-auto sm:w-1/3 p-3 text-center">
+                <h1 class="font-bold text-xl sm:text-3xl mb-5 uppercase">Selamat datang di Disdukcapil</h1>
+                <input-text class="w-56 mb-3 p-2 text-center placeholder-gray-600" type="text" name="nama_user" v-model="nama_user" placeholder='"Masukkan Nama User"' />
+                <input-text class="w-56 mb-3 p-2 text-center placeholder-gray-600" type="password" name="kata_sandi" v-model="kata_sandi" placeholder='"Masukkan Kata Sandi"' />
+                <input-button class="bg-tertier hover:bg-green-700">
                     <img src="/img/icon-login.png" alt="Masuk" class="inline w-6 h-6">
                     Masuk
-                </button>
+                </input-button>
                 <p class="block">atau</p>
-                <inertia-link :href="route('register')" class="block bg-tertier hover:bg-green-700 w-32 mx-auto p-3 rounded-lg text-white uppercase">
+                <input-button :href="route('register')">
                     <img src="/img/icon-signup.png" alt="Daftar" class="inline w-6 h-6">
                     Daftar
-                </inertia-link>
+                </input-button>
                 <div class="clearfix mt-8">
-                    <label class="block float-left">
+                    <label class="block sm:float-left">
                         <label class="underline">
                             <input type="checkbox"> Ingatkan saya masuk
                         </label>
                     </label>
-                    <div class="block float-right">
+                    <div class="sm:float-right">
                         <inertia-link href="#" class="underline">Lupa Kata Sandi?</inertia-link>
                     </div>
                 </div>
             </div>
-            <div class="w-1/3 mx-3 px-3 border-l border-blue-400 h-full pb-3 text-xl">
+            <div class="w-1/3 mx-3 px-3 border-l border-blue-400 h-full pb-3 sm:text-xl">
                 <h1 class="text-blue-700 mb-3">Informasi</h1>
                 <p class="mb-3">
                     <span class="text-red-600">*</span>
@@ -47,10 +42,19 @@
 
 <script>
 import Layout from '@/Shared/Layout'
+import { InputText, InputButton } from '@/Shared/Input'
 
 export default {
     components: {
-        Layout
+        Layout,
+        InputText,
+        InputButton,
+    },
+    data: () => {
+        return {
+            nama_user: '',
+            kata_sandi: '',
+        }
     }
 }
 </script>

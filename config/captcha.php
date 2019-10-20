@@ -16,7 +16,6 @@ return [
         'quality' => 90,
         'math' => true,
     ],
-
     'flat' => [
         'length' => 4,
         'width' => 160,
