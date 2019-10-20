@@ -1,5 +1,5 @@
 <template>
-    <layout title="Aktivasi Akun">
+    <layout title="Aktivasi Akun" :auth="false">
         <card title="Aktivasi Akun">
             <div class="flex">
                 <div class="w-2/3">

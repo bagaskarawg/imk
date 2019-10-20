@@ -1,6 +1,6 @@
 <template>
   <main class="relative min-h-screen">
-    <navbar />
+    <navbar :auth="auth" />
     <div class="container mx-auto p-4 pb-24">
       <slot />
     </div>
@@ -19,6 +19,10 @@ export default {
   },
   props: {
     title: String,
+    auth: {
+      type: Boolean,
+      default: true,
+    }
   },
   watch: {
     title: {

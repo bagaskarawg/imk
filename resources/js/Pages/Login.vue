@@ -1,5 +1,5 @@
 <template>
-    <layout title="Masuk">
+    <layout title="Masuk" :auth="false">
         <div class="flex">
             <div class="w-2/3 md:w-1/3 break-word sm:break-normal border border-black border-2 shadow-lg sm:ml-auto p-3 text-center">
                 <h1 class="font-bold text-xl sm:text-3xl mb-5 uppercase">Selamat datang di Disdukcapil</h1>

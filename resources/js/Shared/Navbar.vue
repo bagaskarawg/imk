@@ -12,18 +12,29 @@
         </div>
         <hr class="my-1 sm:hidden" />
         <div class="text-center sm:float-right">
-            <inertia-link :href="route('home')" class="hover:underline">
-                <img src="/img/home.png" alt="Beranda" class="w-4 h-4 -mt-1 inline-block" /> Beranda
-            </inertia-link>
-            |
-            <inertia-link :href="route('login')" class="hover:underline">Masuk</inertia-link>
-            |
-            <inertia-link :href="route('register')" class="hover:underline">Daftar</inertia-link>
+            <template v-if="auth">
+                <inertia-link :href="route('login')" class="hover:underline">Keluar</inertia-link>
+            </template>
+            <template v-else>
+                <!-- <inertia-link :href="route('home')" class="hover:underline">
+                    <img src="/img/home.png" alt="Beranda" class="w-4 h-4 -mt-1 inline-block" /> Beranda
+                </inertia-link>
+                | -->
+                <inertia-link :href="route('login')" class="hover:underline">Masuk</inertia-link>
+                |
+                <inertia-link :href="route('register')" class="hover:underline">Daftar</inertia-link>
+            </template>
         </div>
     </div>
 </template>
 
 <script>
 export default {
+    props: {
+        auth: {
+            type: Boolean,
+            default: false,
+        },
+    }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <layout title="Daftar">
+    <layout title="Daftar" :auth="false">
         <div class="flex">
             <div class="w-4/6 md:w-3/6 ml-auto border border-black p-3">
                 <h1 class="font-bold text-xl sm:text-3xl mb-5 uppercase text-center">Daftar</h1>
