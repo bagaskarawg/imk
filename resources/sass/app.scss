@@ -3,3 +3,17 @@
 @tailwind components;
 
 @tailwind utilities;
+
+@font-face {
+    font-family: "freehand521";
+    src: url("/fonts/freehand521.ttf");
+}
+
+@font-face {
+    font-family: "broadsheet";
+    src: url("/fonts/broadsheet-regular.ttf");
+}
+
+.font-broadsheet {
+    font-family: "broadsheet";
+}

@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-primary text-center text-white">
+    <div class="w-full bg-primary text-center text-white p-3">
         <p>Sistem Pendaftaran <em>Online</em></p>
-        <p>{{ new Date().getFullYear() }} &copy; Disdukcapil Kota Cianjur</p>
+        <p>{{ new Date().getFullYear() }} &copy; <span class="text-yellow-600">Disdukcapil Kota Cianjur</span></p>
     </div>
 </template>
 
