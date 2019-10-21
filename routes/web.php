@@ -21,3 +21,7 @@ Route::get('aktivasi', 'Auth\RegisterController@showActivationForm')->name('acti
 Route::get('beranda', function () {
     return Inertia\Inertia::render('Home');
 })->name('home');
+Route::get('pendaftaran/akta', 'DocumentRegistrationController@akta')->name('registration.akta');
+Route::get('pendaftaran/ktp', 'DocumentRegistrationController@ktp')->name('registration.ktp');
+Route::get('pendaftaran/kk', 'DocumentRegistrationController@kk')->name('registration.kk');
+Route::get('pendaftaran/tiket', 'DocumentRegistrationController@ticket')->name('registration.ticket');

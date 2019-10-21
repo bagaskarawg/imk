@@ -1,5 +1,5 @@
 <template>
-    <div class="border-b border-gray-500 mb-5 p-3 text-right">
+    <div class="border-b border-gray-500 mb-5 p-3 text-right print:hidden">
         <inertia-link :href="route('home')" class="p-3"
             :class="active === 'home' ? 'border-b-2 border-black' : ''">Beranda</inertia-link>
         <inertia-link :href="route('home')" class="p-3"

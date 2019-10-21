@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-primary p-2 sm:p-5 clearfix text-white">
+    <div class="bg-primary p-2 sm:p-5 clearfix text-white print:hidden">
         <div class="w-full sm:w-2/3 sm:float-left">
             <inertia-link :href="route('welcome')">
                 <img src="/img/logo.png" alt="Logo" class="float-left mr-2 sm:mr-5" />
