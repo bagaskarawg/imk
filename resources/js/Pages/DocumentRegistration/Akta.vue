@@ -2,7 +2,7 @@
     <layout title="Pendaftaran Akta">
         <main-menu active="registration" />
         <h1 class="text-3xl text-center uppercase">Pembuatan Akta Kelahiran</h1>
-        <card class="w-1/3 mx-auto p-2" face="blue">
+        <card class="w-full sm:w-1/2 md:w-1/3 mx-auto p-2" face="blue">
             <input-file name="surat_kelahiran" label="Surat Kelahiran" />
             <input-file name="akta_orang_tua" label="Akta Orang Tua" />
             <input-file name="kk_orang_tua" label="KK Orang Tua" />
