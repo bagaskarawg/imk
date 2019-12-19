@@ -2,10 +2,14 @@
     <div class="bg-primary p-2 sm:p-5 clearfix text-white print:hidden">
         <div class="w-full sm:w-2/3 sm:float-left">
             <inertia-link :href="route('welcome')">
-                <img src="/img/logo.png" alt="Logo" class="float-left mr-2 sm:mr-5" />
+                <img
+                    src="/img/logo.png"
+                    alt="Logo"
+                    class="float-left mr-2 sm:mr-5"
+                />
             </inertia-link>
             <div class="w-auto">
-                <p>Selamat datang
+                <p>Selamat datang</p>
                 <p>Di Dinas Kependudukan dan Pencatatan Sipil</p>
                 <p>Kabupaten Cianjur</p>
             </div>
@@ -13,16 +17,25 @@
         <hr class="my-1 sm:hidden" />
         <div class="text-center sm:float-right">
             <template v-if="auth">
-                <inertia-link :href="route('login')" class="hover:underline">Keluar</inertia-link>
+                <inertia-link
+                    href="#"
+                    @click.prevent="$inertia.post(route('logout'))"
+                    class="hover:underline"
+                    >Keluar</inertia-link
+                >
             </template>
             <template v-else>
                 <!-- <inertia-link :href="route('home')" class="hover:underline">
                     <img src="/img/home.png" alt="Beranda" class="w-4 h-4 -mt-1 inline-block" /> Beranda
                 </inertia-link>
                 | -->
-                <inertia-link :href="route('login')" class="hover:underline">Masuk</inertia-link>
+                <inertia-link :href="route('login')" class="hover:underline"
+                    >Masuk</inertia-link
+                >
                 |
-                <inertia-link :href="route('register')" class="hover:underline">Daftar</inertia-link>
+                <inertia-link :href="route('register')" class="hover:underline"
+                    >Daftar</inertia-link
+                >
             </template>
         </div>
     </div>
@@ -33,8 +46,8 @@ export default {
     props: {
         auth: {
             type: Boolean,
-            default: false,
-        },
+            default: false
+        }
     }
-}
+};
 </script>

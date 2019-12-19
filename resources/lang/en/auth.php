@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'These credentials do not match our records.',
+    'failed' => 'Kombinasi No Ponsel dan Kata Sandi salah.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
 ];
