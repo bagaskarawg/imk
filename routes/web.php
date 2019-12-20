@@ -36,7 +36,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('pendaftaran/akta', 'DocumentRegistrationController@akta')->name('registration.akta');
     Route::get('pendaftaran/ktp', 'DocumentRegistrationController@ktp')->name('registration.ktp');
     Route::get('pendaftaran/kk', 'DocumentRegistrationController@kk')->name('registration.kk');
-    Route::get('pendaftaran/tiket', 'DocumentRegistrationController@ticket')->name('registration.ticket');
+    Route::post('pendaftaran/kk', 'QueueController@kk');
+    Route::get('pendaftaran/tiket/{queue}', 'QueueController@ticket')->name('registration.ticket');
     Route::get('pendaftaran/persyaratan', 'DocumentRegistrationController@requirements')
         ->name('registration.requirements');
     Route::post('keluar', 'Auth\LoginController@logout')->name('logout');

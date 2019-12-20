@@ -3,7 +3,9 @@
         <main-menu active="requirements" />
         <div class="flex">
             <div class="w-full sm:w-1/3">
-                <h1 class="text-xl text-center w-full border-b">Akta Kelahiran</h1>
+                <h1 class="text-xl text-center w-full border-b">
+                    Akta Kelahiran
+                </h1>
                 <ul class="text-center">
                     <li><icon /> Surat Kelahiran</li>
                     <li><icon /> Akta Ayah</li>
@@ -15,7 +17,9 @@
                 </ul>
             </div>
             <div class="w-full sm:w-1/3">
-                <h1 class="text-xl text-center w-full border-b">Kartu Tanda Penduduk</h1>
+                <h1 class="text-xl text-center w-full border-b">
+                    Kartu Tanda Penduduk
+                </h1>
                 <ul class="text-center">
                     <li><icon /> Surat Kelahiran</li>
                     <li><icon /> Akta Kelahiran</li>
@@ -24,7 +28,9 @@
                 </ul>
             </div>
             <div class="w-full sm:w-1/3">
-                <h1 class="text-xl text-center w-full border-b">Kartu Keluarga</h1>
+                <h1 class="text-xl text-center w-full border-b">
+                    Kartu Keluarga
+                </h1>
                 <ul class="text-center">
                     <li><icon /> Surat Kelahiran</li>
                     <li><icon /> Buku Nikah</li>
@@ -42,7 +48,7 @@ export default {
     components: {
         Layout,
         MainMenu,
-        Icon,
+        Icon
     },
     methods: {
         print() {
