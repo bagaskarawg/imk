@@ -42,7 +42,7 @@ export default {
         chooseFile(e) {
             let files = e.target.files;
             this.chosen = files.length > 0;
-            this.$emit("input", files);
+            this.$emit("input", e);
         }
     }
 };

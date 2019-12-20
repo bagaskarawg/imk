@@ -9,6 +9,21 @@ use Inertia\Inertia;
 
 class QueueController extends Controller
 {
+    public function ktp()
+    {
+        $this->validate(request(), [
+            'service' => 'required',
+            'surat_kelahiran' => 'required|file',
+            'akta_kelahiran' => 'required|file',
+            'kartu_keluarga' => 'required|file',
+            'foto' => 'required|file',
+        ]);
+
+        $queue = $this->persistData('kartu_tanda_penduduk');
+
+        return redirect()->route('registration.ticket', $queue);
+    }
+
     public function kk()
     {
         $this->validate(request(), [
@@ -19,17 +34,7 @@ class QueueController extends Controller
             'akta_kelahiran' => 'file',
         ]);
 
-        $user = auth()->user();
-        $queue = new Queue();
-        $queue->service = request('service');
-        $queue->number = $queue->generateNumber();
-        $queue->schedule = $queue->calculateSchedule();
-        foreach (request()->file() as $field => $file) {
-            $fileName = md5(now() . rand()) . '.' . $file->extension();
-            $queue->{$field} = $file->storeAs("kartu_keluarga/{$user->id}", $fileName);
-        }
-
-        $user->queues()->save($queue);
+        $queue = $this->persistData('kartu_keluarga');
 
         return redirect()->route('registration.ticket', $queue);
     }
@@ -41,5 +46,21 @@ class QueueController extends Controller
         }
 
         return Inertia::render('DocumentRegistration/Ticket', compact('queue'));
+    }
+
+    protected function persistData($path)
+    {
+        $user = auth()->user();
+        $queue = new Queue();
+        $queue->service = request('service');
+        $queue->number = $queue->generateNumber();
+        $queue->schedule = $queue->calculateSchedule();
+        foreach (request()->file() as $field => $file) {
+            $fileName = md5(now() . rand()) . '.' . $file->extension();
+            $queue->{$field} = $file->storeAs("{$path}/{$user->id}", $fileName);
+        }
+
+        $user->queues()->save($queue);
+        return $queue;
     }
 }

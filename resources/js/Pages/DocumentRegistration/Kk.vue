@@ -8,22 +8,22 @@
             <input-file
                 name="surat_kelahiran"
                 label="Surat Kelahiran"
-                @input="appendFiles($event, 'surat_kelahiran')"
+                @input="appendFiles"
             />
             <input-file
                 name="buku_nikah"
                 label="Buku Nikah"
-                @input="appendFiles($event, 'buku_nikah')"
+                @input="appendFiles"
             />
             <input-file
                 name="surat_cerai"
                 label="Surat Cerai (Tidak wajib)"
-                @input="appendFiles($event, 'surat_cerai')"
+                @input="appendFiles"
             />
             <input-file
                 name="akta_kelahiran"
                 label="Akta Lahir Anak (Tidak wajib)"
-                @input="appendFiles($event, 'akta_kelahiran')"
+                @input="appendFiles"
             />
             <div class="flex justify-center">
                 <button class="p-3 bg-blue-400" @click="submit()">
@@ -53,7 +53,9 @@ export default {
         };
     },
     methods: {
-        appendFiles(files, fieldName) {
+        appendFiles(events) {
+            let files = events.target.files;
+            let fieldName = events.target.name;
             this.fields[fieldName] = files.length > 0 ? files[0] : null;
         },
         submit() {
