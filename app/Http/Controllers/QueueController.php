@@ -9,6 +9,24 @@ use Inertia\Inertia;
 
 class QueueController extends Controller
 {
+    public function akta()
+    {
+        $this->validate(request(), [
+            'service' => 'required',
+            'surat_kelahiran' => 'required|file',
+            'akta_ayah' => 'required|file',
+            'akta_ibu' => 'required|file',
+            'kartu_keluarga' => 'required|file',
+            'ktp_ayah' => 'required|file',
+            'ktp_ibu' => 'required|file',
+            'buku_nikah' => 'required|file',
+        ]);
+
+        $queue = $this->persistData('akta_kelahiran');
+
+        return redirect()->route('registration.ticket', $queue);
+    }
+
     public function ktp()
     {
         $this->validate(request(), [
