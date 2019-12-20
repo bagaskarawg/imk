@@ -26,4 +26,9 @@ class DocumentRegistrationController extends Controller
     {
         return Inertia::render('DocumentRegistration/Ticket');
     }
+
+    public function requirements()
+    {
+        return Inertia::render('DocumentRegistration/Requirements');
+    }
 }

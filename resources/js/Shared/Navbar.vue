@@ -25,10 +25,6 @@
                 >
             </template>
             <template v-else>
-                <!-- <inertia-link :href="route('home')" class="hover:underline">
-                    <img src="/img/home.png" alt="Beranda" class="w-4 h-4 -mt-1 inline-block" /> Beranda
-                </inertia-link>
-                | -->
                 <inertia-link :href="route('login')" class="hover:underline"
                     >Masuk</inertia-link
                 >

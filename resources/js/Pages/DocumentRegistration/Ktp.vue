@@ -6,6 +6,7 @@
             <input-file name="surat_kelahiran" label="Surat Kelahiran" />
             <input-file name="akta_kelahiran" label="Akta Kelahiran" />
             <input-file name="kartu_keluarga" label="Kartu Keluarga" />
+            <input-file name="foto" label="Foto" />
             <div class="flex justify-center">
                 <button class="p-3 bg-blue-400" @click="submit()">Cetak Nomor Antrian</button>
             </div>

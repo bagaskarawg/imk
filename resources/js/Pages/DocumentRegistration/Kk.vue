@@ -5,7 +5,8 @@
         <card class="w-full sm:w-1/2 md:w-1/3 mx-auto p-2" face="blue">
             <input-file name="surat_kelahiran" label="Surat Kelahiran" />
             <input-file name="buku_nikah" label="Buku Nikah" />
-            <input-file name="surat_cerai" label="Surat Cerai" />
+            <input-file name="surat_cerai" label="Surat Cerai (Tidak wajib)" />
+            <input-file name="akta_kelahiran" label="Akta Lahir Anak (Tidak wajib)" />
             <div class="flex justify-center">
                 <button class="p-3 bg-blue-400" @click="submit()">Cetak Nomor Antrian</button>
             </div>
